@@ -20,7 +20,6 @@ const navLinks = [
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains("dark"));
   const { totalItems } = useCart();
   const { totalItems: wishlistCount } = useWishlist();
   const { user, signOut } = useAuth();
@@ -32,10 +31,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleDark = () => {
-    document.documentElement.classList.toggle("dark");
-    setIsDark(!isDark);
-  };
+
 
   return (
     <motion.header
