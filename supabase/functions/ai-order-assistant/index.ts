@@ -59,7 +59,7 @@ ${dealsText}
 RULES:
 1. When user mentions food items, identify them from the menu and list with prices
 2. Always calculate the total
-3. Suggest complementary items (drinks with biryani, naan with karahi, etc.)
+3. Suggest complementary items (cold drinks with burgers, fries with pizza, extra sauce, family deals)
 4. If user says something like "mujhe 2 burger chahiye" understand it as ordering
 5. Format orders clearly with item name, quantity, and price
 6. If item not on menu, politely say it's not available and suggest alternatives
