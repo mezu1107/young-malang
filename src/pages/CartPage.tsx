@@ -105,7 +105,7 @@ const CartPage = () => {
     const couponLine = coupon ? `\n🎟️ *Coupon (${coupon.coupon.code}):* −Rs.${couponDiscount.toLocaleString()}` : "";
     const loyaltyLine = loyaltyDiscount > 0 ? `\n⭐ *Loyalty (${redeemPts} pts):* −Rs.${loyaltyDiscount.toLocaleString()}` : "";
     return encodeURIComponent(
-      `🛒 *New Order - AL Maalik Foods*\n\n👤 *Name:* ${customerName || "Guest"}\n📞 *Phone:* ${phone || "N/A"}\n📍 *Address:* ${address || "N/A"}${zoneLine}\n\n📋 *Order:*\n${itemsList}\n\n💰 *Subtotal: Rs.${subtotal.toLocaleString()}*${couponLine}${loyaltyLine}\n💰 *Grand Total: Rs.${grandTotal.toLocaleString()}*\n\n💵 Payment: Cash on Delivery`
+      `🛒 *New Order - The Young Malang*\n\n👤 *Name:* ${customerName || "Guest"}\n📞 *Phone:* ${phone || "N/A"}\n📍 *Address:* ${address || "N/A"}${zoneLine}\n\n📋 *Order:*\n${itemsList}\n\n💰 *Subtotal: Rs.${subtotal.toLocaleString()}*${couponLine}${loyaltyLine}\n💰 *Grand Total: Rs.${grandTotal.toLocaleString()}*\n\n💵 Payment: Cash on Delivery`
     );
   };
 
