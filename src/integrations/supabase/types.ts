@@ -280,6 +280,48 @@ export type Database = {
           },
         ]
       }
+      integration_keys: {
+        Row: {
+          active: boolean
+          category: string
+          created_at: string
+          description: string | null
+          id: string
+          is_public: boolean
+          key_name: string
+          label: string
+          sort_order: number
+          updated_at: string
+          value: string
+        }
+        Insert: {
+          active?: boolean
+          category?: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          is_public?: boolean
+          key_name: string
+          label: string
+          sort_order?: number
+          updated_at?: string
+          value?: string
+        }
+        Update: {
+          active?: boolean
+          category?: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          is_public?: boolean
+          key_name?: string
+          label?: string
+          sort_order?: number
+          updated_at?: string
+          value?: string
+        }
+        Relationships: []
+      }
       loyalty_transactions: {
         Row: {
           created_at: string
@@ -720,6 +762,42 @@ export type Database = {
           id?: string
           rider_id?: string
           status?: string
+        }
+        Relationships: []
+      }
+      rider_locations: {
+        Row: {
+          created_at: string
+          heading: number | null
+          id: string
+          is_online: boolean
+          lat: number
+          lng: number
+          rider_id: string
+          speed: number | null
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          heading?: number | null
+          id?: string
+          is_online?: boolean
+          lat: number
+          lng: number
+          rider_id: string
+          speed?: number | null
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          heading?: number | null
+          id?: string
+          is_online?: boolean
+          lat?: number
+          lng?: number
+          rider_id?: string
+          speed?: number | null
+          updated_at?: string
         }
         Relationships: []
       }
