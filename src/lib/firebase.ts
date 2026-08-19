@@ -4,15 +4,15 @@ import { getMessaging, getToken, onMessage, isSupported, type Messaging } from "
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBU-9-DFUYVd68wJaPr0sbMuU5yM1gL4AM",
-  authDomain: "al-tawakkal-foods.firebaseapp.com",
-  projectId: "al-tawakkal-foods",
-  storageBucket: "al-tawakkal-foods.firebasestorage.app",
-  messagingSenderId: "221582591815",
-  appId: "1:221582591815:web:1360b56aa610a745656e62",
+  authDomain: "young-malang.firebaseapp.com",
+  projectId: "young-malang",
+  storageBucket: "young-malang.firebasestorage.app",
+  messagingSenderId: "443616002616",
+  appId: "1:443616002616:web:3490d55a1a09801a371ccd",
 };
 
 export const VAPID_KEY =
-  "BERDUSPgKhyGvHQ6N0lnEOxQGvyKi85XBqJFtDkjoXbmZE6tj_zXu98uvChoJAgcBo-SItsH_xpUdrd8m64zaR4";
+  "BBScrS86R00H1BxK-FAYISt7-8YHDc5frut4E4dA9dOSHuxTyeo7DYUkRrTlSPzuUO7XoUO6LKCfJrX30M1TX6Q";
 
 export const firebaseApp = getApps().length ? getApp() : initializeApp(firebaseConfig);
 
