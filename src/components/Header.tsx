@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ShoppingCart, User, Menu, LogOut, Heart, UserCircle, Sun, Moon } from "lucide-react";
+import { ShoppingCart, User, Menu, LogOut, Heart, UserCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
@@ -20,7 +20,6 @@ const navLinks = [
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isDark, setIsDark] = useState(() => document.documentElement.classList.contains("dark"));
   const { totalItems } = useCart();
   const { totalItems: wishlistCount } = useWishlist();
   const { user, signOut } = useAuth();
@@ -32,10 +31,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleDark = () => {
-    document.documentElement.classList.toggle("dark");
-    setIsDark(!isDark);
-  };
+
 
   return (
     <motion.header
@@ -69,11 +65,7 @@ const Header = () => {
             </div>
 
             <div className="flex items-center gap-2 md:gap-4">
-              {/* Dark mode */}
-              <motion.button whileTap={{ rotate: 180 }} onClick={toggleDark}
-                className="text-foreground/70 hover:text-primary transition-colors p-1.5">
-                {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-              </motion.button>
+
 
               {/* Wishlist */}
               <Link to="/wishlist" className="relative text-foreground/70 hover:text-primary transition-colors p-1.5">

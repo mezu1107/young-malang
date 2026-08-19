@@ -46,7 +46,7 @@ serve(async (req) => {
     const menuText = (foods || []).map((f: any) => `${f.title} - Rs.${f.price} (${catMap[f.category_id] || 'Other'})${f.badge ? ` [${f.badge}]` : ''}`).join('\n');
     const dealsText = (deals || []).map((d: any) => `${d.title} - Rs.${d.price} - ${d.description}`).join('\n');
 
-    const systemPrompt = `You are the AI ordering assistant for The Young Malang, a Pakistani restaurant.
+    const systemPrompt = `You are the AI ordering assistant for The Young Malang, a fast food restaurant in Mankiala, Rawalpindi (burgers, pizza, sandwiches, wraps, rolls, fried chicken, fries and drinks).
 You help customers order food via natural language in English AND Urdu (Roman Urdu).
 You are friendly, helpful, and always try to upsell (suggest drinks, sides, deals).
 
@@ -59,7 +59,7 @@ ${dealsText}
 RULES:
 1. When user mentions food items, identify them from the menu and list with prices
 2. Always calculate the total
-3. Suggest complementary items (drinks with biryani, naan with karahi, etc.)
+3. Suggest complementary items (cold drinks with burgers, fries with pizza, extra sauce, family deals)
 4. If user says something like "mujhe 2 burger chahiye" understand it as ordering
 5. Format orders clearly with item name, quantity, and price
 6. If item not on menu, politely say it's not available and suggest alternatives
