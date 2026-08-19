@@ -4,11 +4,11 @@ importScripts("https://www.gstatic.com/firebasejs/10.13.0/firebase-messaging-com
 
 firebase.initializeApp({
   apiKey: "AIzaSyBU-9-DFUYVd68wJaPr0sbMuU5yM1gL4AM",
-  authDomain: "al-tawakkal-foods.firebaseapp.com",
-  projectId: "al-tawakkal-foods",
-  storageBucket: "al-tawakkal-foods.firebasestorage.app",
-  messagingSenderId: "221582591815",
-  appId: "1:221582591815:web:1360b56aa610a745656e62",
+  authDomain: "young-malang.firebaseapp.com",
+  projectId: "young-malang",
+  storageBucket: "young-malang.firebasestorage.app",
+  messagingSenderId: "443616002616",
+  appId: "1:443616002616:web:3490d55a1a09801a371ccd",
 });
 
 const messaging = firebase.messaging();
@@ -22,7 +22,7 @@ messaging.onBackgroundMessage((payload) => {
     icon: "/icons/icon-192.png",
     badge: "/icons/icon-192.png",
     data: { url },
-    tag: payload?.data?.tag || "almaalik",
+    tag: payload?.data?.tag || "youngmalang",
     requireInteraction: false,
   });
 });

@@ -245,32 +245,35 @@ const MenuPage = () => {
             </motion.div>
           )}
 
-          {/* Category filters */}
-          <div className="flex flex-wrap gap-3 mb-8">
-            <button
-              onClick={() => setSelectedCategory(null)}
-              className={`px-5 py-2.5 rounded-full font-medium transition-all ${
-                !selectedCategory
-                  ? "bg-primary text-primary-foreground shadow-md"
-                  : "bg-card text-muted-foreground hover:bg-muted/80 border border-border"
-              }`}
-            >
-              All
-            </button>
-            {categories.map((cat) => (
+          {/* Category filters — single scrollable line */}
+          <div className="-mx-4 px-4 mb-8">
+            <div className="flex gap-2.5 overflow-x-auto whitespace-nowrap pb-2 [scrollbar-width:thin]">
               <button
-                key={cat.id}
-                onClick={() => setSelectedCategory(cat.id)}
-                className={`px-5 py-2.5 rounded-full font-medium transition-all ${
-                  selectedCategory === cat.id
+                onClick={() => setSelectedCategory(null)}
+                className={`shrink-0 px-5 py-2.5 rounded-full font-medium transition-all ${
+                  !selectedCategory
                     ? "bg-primary text-primary-foreground shadow-md"
                     : "bg-card text-muted-foreground hover:bg-muted/80 border border-border"
                 }`}
               >
-                {cat.title}
+                All
               </button>
-            ))}
+              {categories.map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => setSelectedCategory(cat.id)}
+                  className={`shrink-0 px-5 py-2.5 rounded-full font-medium transition-all ${
+                    selectedCategory === cat.id
+                      ? "bg-primary text-primary-foreground shadow-md"
+                      : "bg-card text-muted-foreground hover:bg-muted/80 border border-border"
+                  }`}
+                >
+                  {cat.title}
+                </button>
+              ))}
+            </div>
           </div>
+
 
           <p className="text-sm text-muted-foreground mb-4">
             {loading ? "" : `${filtered.length} ${filtered.length === 1 ? "dish" : "dishes"} found`}
