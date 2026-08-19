@@ -14,7 +14,7 @@ firebase.initializeApp({
 const messaging = firebase.messaging();
 
 messaging.onBackgroundMessage((payload) => {
-  const title = payload?.notification?.title || payload?.data?.title || "AL Maalik Foods";
+  const title = payload?.notification?.title || payload?.data?.title || "The Young Malang";
   const body = payload?.notification?.body || payload?.data?.body || "";
   const url = payload?.data?.url || "/";
   self.registration.showNotification(title, {

@@ -173,7 +173,7 @@ const ProfilePage = () => {
   const shareReferral = () => {
     if (!profile.referral_code) return;
     const url = `${window.location.origin}/auth?ref=${profile.referral_code}`;
-    const msg = encodeURIComponent(`Join me on AL Maalik Foods and we both get a discount! Use code ${profile.referral_code} or sign up here: ${url}`);
+    const msg = encodeURIComponent(`Join me on The Young Malang and we both get a discount! Use code ${profile.referral_code} or sign up here: ${url}`);
     window.open(`https://wa.me/?text=${msg}`, "_blank");
   };
 
