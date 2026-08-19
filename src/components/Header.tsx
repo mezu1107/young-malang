@@ -69,11 +69,7 @@ const Header = () => {
             </div>
 
             <div className="flex items-center gap-2 md:gap-4">
-              {/* Dark mode */}
-              <motion.button whileTap={{ rotate: 180 }} onClick={toggleDark}
-                className="text-foreground/70 hover:text-primary transition-colors p-1.5">
-                {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-              </motion.button>
+
 
               {/* Wishlist */}
               <Link to="/wishlist" className="relative text-foreground/70 hover:text-primary transition-colors p-1.5">
