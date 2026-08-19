@@ -355,14 +355,19 @@ export type Database = {
       orders: {
         Row: {
           amount_paid: number
+          assigned_at: string | null
           coupon_code: string | null
           created_at: string
           customer_address: string | null
           customer_email: string | null
           customer_name: string | null
           customer_phone: string | null
+          delivered_at: string | null
           delivery_charges: number
+          delivery_lat: number | null
+          delivery_lng: number | null
           discount_amount: number
+          distance_km: number | null
           id: string
           notes: string | null
           order_type: string
@@ -379,14 +384,19 @@ export type Database = {
         }
         Insert: {
           amount_paid?: number
+          assigned_at?: string | null
           coupon_code?: string | null
           created_at?: string
           customer_address?: string | null
           customer_email?: string | null
           customer_name?: string | null
           customer_phone?: string | null
+          delivered_at?: string | null
           delivery_charges?: number
+          delivery_lat?: number | null
+          delivery_lng?: number | null
           discount_amount?: number
+          distance_km?: number | null
           id?: string
           notes?: string | null
           order_type?: string
@@ -403,14 +413,19 @@ export type Database = {
         }
         Update: {
           amount_paid?: number
+          assigned_at?: string | null
           coupon_code?: string | null
           created_at?: string
           customer_address?: string | null
           customer_email?: string | null
           customer_name?: string | null
           customer_phone?: string | null
+          delivered_at?: string | null
           delivery_charges?: number
+          delivery_lat?: number | null
+          delivery_lng?: number | null
           discount_amount?: number
+          distance_km?: number | null
           id?: string
           notes?: string | null
           order_type?: string
@@ -831,6 +846,8 @@ export type Database = {
           id: string
           min_payout: number
           payout_schedule: string
+          per_km_rate: number
+          points_per_order: number
           support_phone: string
           support_whatsapp: string
           updated_at: string
@@ -840,6 +857,8 @@ export type Database = {
           id?: string
           min_payout?: number
           payout_schedule?: string
+          per_km_rate?: number
+          points_per_order?: number
           support_phone?: string
           support_whatsapp?: string
           updated_at?: string
@@ -849,6 +868,8 @@ export type Database = {
           id?: string
           min_payout?: number
           payout_schedule?: string
+          per_km_rate?: number
+          points_per_order?: number
           support_phone?: string
           support_whatsapp?: string
           updated_at?: string
@@ -961,6 +982,9 @@ export type Database = {
           free_delivery_above: number
           id: string
           instagram_url: string | null
+          logo_url: string | null
+          maintenance_message: string
+          maintenance_mode: boolean
           opening_hours_weekday: string
           opening_hours_weekend: string
           restaurant_name: string
@@ -976,6 +1000,9 @@ export type Database = {
           free_delivery_above?: number
           id?: string
           instagram_url?: string | null
+          logo_url?: string | null
+          maintenance_message?: string
+          maintenance_mode?: boolean
           opening_hours_weekday?: string
           opening_hours_weekend?: string
           restaurant_name?: string
@@ -991,6 +1018,9 @@ export type Database = {
           free_delivery_above?: number
           id?: string
           instagram_url?: string | null
+          logo_url?: string | null
+          maintenance_message?: string
+          maintenance_mode?: boolean
           opening_hours_weekday?: string
           opening_hours_weekend?: string
           restaurant_name?: string
